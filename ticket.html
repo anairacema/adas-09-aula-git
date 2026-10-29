@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket</title>
+  <link rel="stylesheet" href="styles/ticket.css">
+</head>
+<body>
+     <h1>Compra de Ticket</h1>
+    <a href="index.html">Voltar </a>
+
+    <form method="get" action="ticket.php">
+<fieldset>
+        <legend>Cadastro do responsável</legend>
+        <div>
+            <label for="campo-nome">Nome completo</label>
+            <input type="text" id="campo-nome" name="nome" minlength="5" maxlength="50" placeholder="Digite seu nome completo" required>
+        </div>
+
+        <div>
+            <label for="campo-cpf">CPF</label>
+            <input type="text" id="campo-cpf" name="CPF" minlength= "14" maxlength="14" pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}" placeholder="000.000.000-00" required>
+        </div>
+
+        <div>
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required>
+        </div>
+
+        <div>
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+        </div>
+
+        <div>
+            <label for="datanasci">Data de nascimento</label>
+            <input type="date" id="datanasci" name="datanasci" placeholder="00/00/0000" required>
+        </div>
+</fieldset>
+<fieldset>
+        <legend>Cadastro Dependente</legend>
+        <div>
+            <label for="campo-nome">Nome completo do Dependente</label>
+            <input type="text" id="campo-nome" name="nome" minlength="5" maxlength="50" placeholder="Digite seu nome completo" required>
+        </div>
+
+        <div>
+            <label for="campo-cpf">CPF do Dependente</label>
+            <input type="text" id="campo-cpf" name="CPF" minlength= "14" maxlength="14" pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}" placeholder="000.000.000-00" required>
+        </div>
+
+        <div>
+            <label for="datanasci">Data de nascimento</label>
+            <input type="date" id="datanasci" name="datanasci" placeholder="00/00/0000" required>
+        </div>
+</fieldset>
+<fieldset>
+
+            <legend>Forma de Pagemanto</legend>
+
+        <div>
+            <h3>Cartão de Crédito</h3>
+
+        <div>
+            <label for="cartao">Número do cartão:</label>
+            <input type="text" id="cartao" name="cartao" inputmode="numeric" pattern="[0-9]{16}" maxlength="16" title="Digite os 16 números do cartão" required>
+        </div>
+
+        <div>
+            <label for="validade">Validade ano:</label>
+            <input type="number" id="validade-ano" name="Validade" min= "2026" max +10>
+        </div>  
+
+        <div>  
+            <label for="validade">Validade mês:</label>
+            <input type="number" id="validade-mes" name="Validade" min= "1" max="12">
+        </div>
+
+        <div>
+            <label for="CVC"> CVC</label>
+            <input type="number" id="cvc" name="CVC" min="1" max="999">
+        </div>
+        <h3>Valor total da compra: R$ 103,97</h3>
+            <button>Confirmar</button>
+    </div>
+</fieldset>
+    </form>
+</body>
+</html>

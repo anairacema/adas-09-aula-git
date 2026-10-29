@@ -1,0 +1,266 @@
+
+/* ===== PALETA E CONFIGURAÇÕES ===== */
+:root {
+    --fundo: #f7f6f2;
+    --branco: #ffffff;
+    --verde: #718879;
+    --verde-claro: #e5ede6;
+    --bege: #eee8dc;
+    --texto: #343d38;
+    --texto-suave: #737b75;
+    --borda: #e2e4dc;
+    --destaque: #b58b62;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--fundo);
+    color: var(--texto);
+    line-height: 1.7;
+    padding: 30px 20px;
+}
+
+/* ===== TÍTULO PRINCIPAL ===== */
+body > h1 {
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: #405849;
+    margin: 25px 0 15px;
+    letter-spacing: -0.8px;
+}
+
+body > a {
+    margin: 5px;
+}
+
+/* ===== LINKS E MENU ===== */
+a {
+    display: inline-block;
+    color: #506b59;
+    background: var(--verde-claro);
+    text-decoration: none;
+    padding: 9px 15px;
+    margin: 4px 3px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: 0.2s ease;
+}
+
+a:hover {
+    background: var(--verde);
+    color: white;
+}
+
+/* ===== SEÇÕES DOS GATOS ===== */
+fieldset {
+    max-width: 1100px;
+    margin: 28px auto;
+    padding: 28px;
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 14px;
+    box-shadow: 0 4px 15px #303d3010;
+}
+
+fieldset h2 {
+    color: #526c5b;
+    font-size: 1.65rem;
+    font-weight: 600;
+    margin: 24px 0 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--borda);
+    scroll-margin-top: 20px;
+}
+
+fieldset p {
+    color: #626b64;
+    margin: 12px 0;
+    line-height: 1.8;
+}
+
+fieldset img {
+    display: block;
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto 35px;
+    border-radius: 12px;
+    border: 1px solid var(--borda);
+    object-fit: cover;
+    transition: transform 0.25s ease;
+}
+
+fieldset img:hover {
+    transform: scale(1.03);
+}
+
+/* ===== CATÁLOGO ===== */
+.container {
+    max-width: 1150px;
+    margin: 40px auto;
+    padding: 28px;
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 16px;
+    box-shadow: 0 4px 18px #303d300d;
+}
+
+.container header {
+    text-align: center;
+    background: var(--verde-claro);
+    padding: 28px 20px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+.container header h1 {
+    color: #405849;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.container header p {
+    color: var(--texto-suave);
+    font-size: 1rem;
+}
+
+/* ===== TABELA DE PREÇOS ===== */
+.table-box {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+thead {
+    background: #e9eee8;
+}
+
+th {
+    color: #405849;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-align: left;
+    padding: 15px 14px;
+    white-space: nowrap;
+}
+
+td {
+    padding: 14px;
+    text-align: left;
+    border-top: 1px solid #eceee9;
+    color: #555e57;
+}
+
+tbody tr:nth-child(even) {
+    background: #fafaf7;
+}
+
+tbody tr:hover {
+    background: #f0f4ee;
+}
+
+td:first-child {
+    color: #405849;
+    font-weight: 600;
+}
+
+.preco {
+    color: #647b66;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* ===== FORMULÁRIOS ===== */
+fieldset legend {
+    color: #526c5b;
+    font-size: 1.15rem;
+    font-weight: 600;
+    padding: 0 10px;
+}
+
+fieldset label {
+    display: inline-block;
+    color: #4b554d;
+    font-weight: 500;
+    margin: 8px 0 5px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="date"] {
+    display: block;
+    width: 100%;
+    max-width: 520px;
+    padding: 12px 14px;
+    margin-bottom: 14px;
+    font: inherit;
+    color: var(--texto);
+    background: #fcfcfa;
+    border: 1px solid #d8ded6;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+    border-color: var(--verde);
+    box-shadow: 0 0 0 3px #71887920;
+}
+
+input::placeholder {
+    color: #a1a69f;
+}
+
+input[type="radio"] {
+    accent-color: var(--verde);
+    margin: 12px 6px 12px 0;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 700px) {
+    body {
+        padding: 15px 10px;
+    }
+
+    body > h1 {
+        font-size: 1.8rem;
+    }
+
+    fieldset,
+    .container {
+        padding: 16px;
+        margin: 20px auto;
+    }
+
+    .container header h1 {
+        font-size: 1.6rem;
+    }
+
+    fieldset img {
+        width: 180px;
+    }
+
+    table {
+        min-width: 650px;
+    }
+}
